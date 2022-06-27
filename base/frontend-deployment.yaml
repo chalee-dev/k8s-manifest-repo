@@ -8,15 +8,15 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: demo-frontend
+      app: frontend-fargate
   template:
     metadata:
       labels:
-        app: demo-frontend
+        app: frontend-fargate
     spec:
       containers:
         - name: demo-frontend
-          image: 244340579641.dkr.ecr.us-east-2.amazonaws.com/demo-frontend:1
+          image: 244340579641.dkr.ecr.us-east-2.amazonaws.com/demo-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
